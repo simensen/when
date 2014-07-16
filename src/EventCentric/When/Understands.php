@@ -20,8 +20,8 @@ trait Understands
             if ($domainEvent instanceof $type) {
                 return true;
             }
-
-            return false;
         }
+
+        return false;
     }
 }

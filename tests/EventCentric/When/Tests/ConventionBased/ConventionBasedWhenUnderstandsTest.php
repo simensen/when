@@ -26,8 +26,8 @@ final class MyReactorUnderstands
     public function test()
     {
         $domainEvents = new DomainEventsArray([
-            new SomethingWeUnderstandHappened(),
             new SomethingElseWeDoNotUnderstandHappened(),
+            new SomethingWeUnderstandHappened(),
         ]);
 
         foreach ($domainEvents as $domainEvent) {
@@ -45,7 +45,8 @@ final class MyReactorUnderstands
     protected function understoodDomainEvents()
     {
         return [
-            'EventCentric\When\Tests\ConventionBased\SomethingWeUnderstandHappened'
+            'EventCentric\When\Tests\ConventionBased\SomethingWeUnderstandButDoNotTouchHappened',
+            'EventCentric\When\Tests\ConventionBased\SomethingWeUnderstandHappened',
         ];
     }
 }
